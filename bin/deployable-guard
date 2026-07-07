@@ -13,20 +13,13 @@
  */
 
 ( static function ( array $argv ): void {
-	$autoload = null;
-	foreach ( [ __DIR__ . '/../vendor/autoload.php', __DIR__ . '/../../../autoload.php' ] as $candidate ) {
-		if ( is_file( $candidate ) ) {
-			$autoload = $candidate;
-			break;
-		}
-	}
-
-	if ( $autoload ) {
-		require $autoload;
-	} else {
-		require __DIR__ . '/../src/DeployableChecker.php';
-		require __DIR__ . '/../src/HookInstaller.php';
-	}
+	// This tool has NO external dependencies, so it loads its own classes directly
+	// rather than any composer autoloader. That is deliberate: as an installed dev
+	// dependency, the consumer's autoloader is regenerated --no-dev and therefore
+	// EXCLUDES this package — loading it would fatal on a missing class. Direct
+	// require works identically standalone (CI checkout) and as a dependency.
+	require_once __DIR__ . '/../src/DeployableChecker.php';
+	require_once __DIR__ . '/../src/HookInstaller.php';
 
 	$cmd  = $argv[1] ?? 'check';
 	$root = getcwd();
