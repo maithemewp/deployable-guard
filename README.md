@@ -13,10 +13,10 @@ Add the VCS repository and require it as a dev dependency:
 ```jsonc
 {
     "repositories": [
-        { "type": "vcs", "url": "https://github.com/maithemewp/deployable-guard" }
+        { "type": "vcs", "url": "https://github.com/bizbudding/deployable-guard" }
     ],
     "require-dev": {
-        "maithemewp/deployable-guard": "^1"
+        "bizbudding/deployable-guard": "^1"
     },
     "scripts": {
         "post-install-cmd": [ "@php vendor/bin/deployable-guard install-hook" ],

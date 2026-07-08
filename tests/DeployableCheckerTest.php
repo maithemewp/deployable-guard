@@ -1,6 +1,6 @@
 <?php
 
-use Mai\DeployableGuard\DeployableChecker;
+use Bizbudding\DeployableGuard\DeployableChecker;
 use PHPUnit\Framework\TestCase;
 
 final class DeployableCheckerTest extends TestCase {

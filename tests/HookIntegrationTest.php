@@ -1,6 +1,6 @@
 <?php
 
-use Mai\DeployableGuard\HookInstaller;
+use Bizbudding\DeployableGuard\HookInstaller;
 use PHPUnit\Framework\TestCase;
 
 final class HookIntegrationTest extends TestCase {

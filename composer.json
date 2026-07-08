@@ -1,5 +1,5 @@
 {
-    "name": "maithemewp/deployable-guard",
+    "name": "bizbudding/deployable-guard",
     "description": "Verify a committed composer autoloader is deployable as a raw git tree; self-installs a pre-commit hook + CI check.",
     "type": "library",
     "license": "GPL-2.0-or-later",
@@ -11,7 +11,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Mai\\DeployableGuard\\": "src/"
+            "Bizbudding\\DeployableGuard\\": "src/"
         }
     },
     "bin": [

@@ -1,6 +1,6 @@
 <?php
 
-namespace Mai\DeployableGuard;
+namespace Bizbudding\DeployableGuard;
 
 /**
  * Verify a committed composer files-autoloader is deployable as a raw git tree.

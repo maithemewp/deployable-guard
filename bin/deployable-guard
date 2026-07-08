@@ -31,7 +31,7 @@
 
 	switch ( $cmd ) {
 		case 'check':
-			$missing = ( new Mai\DeployableGuard\DeployableChecker( $root ) )->missing();
+			$missing = ( new Bizbudding\DeployableGuard\DeployableChecker( $root ) )->missing();
 			if ( $missing ) {
 				fwrite( STDERR, "\xE2\x9C\x96 Committed autoloader references files that are NOT git-tracked (not deployable as-is):\n" );
 				foreach ( $missing as $rel ) {
@@ -44,7 +44,7 @@
 			exit( 0 );
 
 		case 'install-hook':
-			( new Mai\DeployableGuard\HookInstaller( $root ) )->install();
+			( new Bizbudding\DeployableGuard\HookInstaller( $root ) )->install();
 			exit( 0 );
 
 		default:
